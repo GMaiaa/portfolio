@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+ 
+}
+
+:root {
+  --bg-primary: rgb(47, 46, 65);
+  --white: rgb(255,255,255);
+  --blue: rgb(0, 191, 166);
+  --ff-primary: "JetBrains Mono", monospace;
+  --ff-secondary: "Open Sans", sans-serif;
+
+  
+
+  font-size: 62.5%;
+}
+
+#header { 
+  background: rgb(59,57,85);
+background: radial-gradient(circle, rgba(59,57,85,1) 45%, rgba(47,46,65,1) 100%);
+}
+
+#header nav {
+  display: flex;
+  align-items: center;
+  height: 12rem;
+  justify-content: space-between;
+
+  font-family: var(--ff-primary);
+  font-size: 1.4rem;
+
+  margin: 0 9.9rem 0 9.9rem;
+}
+
+nav img{
+    width: 30rem;
+}
+
+ul {
+  display: flex;
+  gap: 64px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: medium;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-decoration: none;
+}
+
+#aboutCv{
+  background: rgb(59,57,85);
+background: radial-gradient(circle, rgba(59,57,85,1) 45%, rgba(47,46,65,1) 100%);
+}
+#aboutCvContent{
+  justify-content: space-between;
+  display:flex;
+  align-items:center;
+  height: 60rem;
+  margin: 0rem 9.9rem 0 9.9rem;
+}
+
+#aboutCv h2{
+  color: var(--white);
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+#aboutCv h1{
+  margin-top: 3rem;
+  color: var(--blue);
+  font-family: var(--ff-secondary);
+  font-size: 5rem;
+  font-weight: 5rem
+}
+
+#aboutCv p{
+  margin-top: 3rem;
+  font-family: var(--ff-secondary);
+  font-size: 1.6rem;
+  color: #C2C2C2;
+  width: 50rem
+}
+
+#aboutCv button{
+  margin-top: 3rem;
+  width: 25rem;
+  height: 5rem;
+
+  background:none;
+  border: 1.5px solid var(--blue);
+  color: var(--blue);
+  font-family: var(--ff-primary);
+  font-weight: 500;
+
+  cursor: pointer
+
+}
+
+#aboutCv img{
+  width: 70rem
+}
