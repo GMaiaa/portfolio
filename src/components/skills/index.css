@@ -1,0 +1,26 @@
+#skill {
+background: rgba(26, 25, 25, 0.5);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  align-items: center;
+  width: 15rem;
+  justify-content: center;
+  height: 20rem;
+  font-size: 5rem;
+}
+
+#skill p {
+  font-family: var(--ff-secondary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #c2c2c2;
+}
+
+#skillBar {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background: rgb(26, 25, 25);
+  width: 10rem;
+  height: 1rem;
+}
