@@ -19,7 +19,6 @@
 }
 
 #body{
-  background: rgb(59,57,85);
   background: radial-gradient(circle, rgba(59,57,85,1) 45%, rgba(47,46,65,1) 100%);
 }
 
@@ -210,7 +209,7 @@ color: #059784;
 }
 
 #skills{
-  margin: 9.9rem 0  ;
+  margin: 9.9rem 0 6rem 0  ;
   display: flex;
   flex-direction: column;
   height: 40rem;
@@ -240,10 +239,12 @@ color: #059784;
 }
 
 #lab{
-  height: 40rem;
+  height: 70rem;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #labTitle{
+  padding-top: 9.9rem;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -257,4 +258,96 @@ color: #059784;
   color: var(--white);
   font-weight: 700;
   font-size: 3rem;
+}
+
+#labContent{
+  
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+#contact{
+  height: 40rem;
+}
+
+
+#contactTitle{
+  margin-top: 9.9rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: var(--blue);
+  font-size: 2.5rem;
+}
+
+#contactTitle h1{
+  margin-left: 2rem;
+
+  color: var(--white);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#contactContent{
+  margin-top: 5rem;
+  font-family: var(--ff-secondary);
+  color:#C2C2C2 ;
+  font-weight: 500;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+#aboutContact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#myMedias{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+#myMedias p{
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+
+footer{
+height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #C2C2C2 ;
+  font-size: 1.6rem;
+  background-color: rgb(36, 35, 48);
+}
+
+#footerBar{
+  bottom: 0;
+  display: flex;
+  background: var(--blue);
+  width: 100%;
+  height: 1rem;
+  
+
 }
