@@ -24,3 +24,12 @@ background: rgba(26, 25, 25, 0.5);
   width: 10rem;
   height: 1rem;
 }
+
+@media screen and (max-width: 700px) {
+ #skill{
+  padding: 15px;
+ }
+  #skillBar{
+
+  }
+}

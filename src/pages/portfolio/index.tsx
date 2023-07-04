@@ -12,6 +12,7 @@ import {
   AiOutlineWhatsApp,
   AiOutlineMail,
 } from "react-icons/ai";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { SiSquare, SiMysql } from "react-icons/si";
 import {
   BiLogoCss3,
@@ -22,10 +23,18 @@ import {
 } from "react-icons/bi";
 import "animate.css";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 import Skill, { SkillProps } from "../../components/skills";
 import LabCard, { cardProps } from "../../components/labCards";
 
 const Porfolio = () => {
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const showNavBar = () => {
+    const ref = navRef.current;
+    ref?.classList.toggle("reponsiveNav");
+  };
+
   const cards: cardProps[] = [
     {
       image:
@@ -33,7 +42,7 @@ const Porfolio = () => {
       title: "FastSale PDV - P.I FATEC 2º Semestre",
       desc: "Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis.",
       languages: ["React", "Firebase"],
-      adress: "https://github.com/GMaiaa/ProjetoPDV"
+      adress: "https://github.com/GMaiaa/ProjetoPDV",
     },
     {
       image:
@@ -41,7 +50,7 @@ const Porfolio = () => {
       title: "GitHub Favorites",
       desc: "Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis.",
       languages: ["HTML", "CSS", "JavaScript"],
-      adress: "https://github.com/GMaiaa/Rocketseat/tree/main/GitHub-Favorites"
+      adress: "https://github.com/GMaiaa/Rocketseat/tree/main/GitHub-Favorites",
     },
     {
       image:
@@ -49,7 +58,8 @@ const Porfolio = () => {
       title: "Jogo da adivinhação",
       desc: "Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis.",
       languages: ["HTML", "CSS", "JavaS"],
-      adress: "https://github.com/GMaiaa/Rocketseat/tree/main/JS/jogo-adivinhacao"
+      adress:
+        "https://github.com/GMaiaa/Rocketseat/tree/main/JS/jogo-adivinhacao",
     },
   ];
   const skills: SkillProps[] = [
@@ -99,8 +109,8 @@ const Porfolio = () => {
   return (
     <div id="body">
       <div id="header">
-        <nav>
-          <img src={Logo} alt="" />
+        <img src={Logo} alt="" />
+        <nav ref={navRef}>
           <ul>
             <li>
               <a href="#aboutMe"> Sobre </a>
@@ -112,10 +122,16 @@ const Porfolio = () => {
               <a href="#lab"> Laboratório </a>
             </li>
             <li>
-              <a href="#dadad"> Contato </a>
+              <a href="#contact"> Contato </a>
             </li>
           </ul>
+          <button className="navBtn navCloseBtn" onClick={showNavBar}>
+            <FaTimes />
+          </button>
         </nav>
+        <button className="navBtn" onClick={showNavBar}>
+          <FaBars />
+        </button>
       </div>
       <div id="aboutCv">
         <div id="aboutCvContent">
@@ -237,20 +253,41 @@ const Porfolio = () => {
           </div>
           <div id="myMedias">
             <div className="medias">
-               <p><AiOutlineWhatsApp />11 95158-0560</p>
-               <p><AiOutlineMail />gabrielmaiaa22@gmail.com</p>
+              <p>
+                <AiOutlineWhatsApp
+                  style={{ color: "var(--blue)", fontSize: "2rem" }}
+                />
+                11 95158-0560
+              </p>
+              <p>
+                <AiOutlineMail
+                  style={{ color: "var(--blue)", fontSize: "2rem" }}
+                />
+                gabrielmaiaa22@gmail.com
+              </p>
             </div>
             <div className="medias">
-               <p> <AiOutlineGithub />https://github.com/GMaiaa</p>
-              <p><AiOutlineLinkedin /> https://www.linkedin.com/in/gabrielmaiasoares/</p>
+              <p>
+                {" "}
+                <AiOutlineGithub
+                  style={{ color: "var(--blue)", fontSize: "2rem" }}
+                />
+                github.com/GMaiaa
+              </p>
+              <p>
+                <AiOutlineLinkedin
+                  style={{ color: "var(--blue)", fontSize: "2rem" }}
+                />{" "}
+                linkedin.com/in/gabrielmaiasoares/
+              </p>
             </div>
           </div>
         </div>
       </div>
-     <p>© 2023 - Developed by Gabriel Maia</p> 
-        <footer>
+      <div id="footer">
+        <p>© 2023 - Developed by Gabriel Maia</p>
         <div id="footerBar"></div>
-      </footer>
+      </div>
     </div>
   );
 };
